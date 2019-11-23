@@ -5,7 +5,6 @@
 ## Getting Started:
 We are going to walk through the steps of deploying a simple application with Spinnaker on an Amazon Web Services EKS cluster and then set up a CICD pipeline for it with Jenkins. This will take about an hour to go through simply because it requires a lot of installations. I will be referencing this tutorial from [Spinnaker](https://www.spinnaker.io/guides/tutorials/codelabs/hello-deployment/) but I wanted to created my own steps because they leave out some important detalis and troubleshooting advice. Once we finish this up, you should feel very accomplished because this can get rather tricky. Lets get started!
 
-Here is the agenda for what we will be doing:
 ### Spinnaker
 - [Create EC2 Instance](#create-ec2-instace)
 - [Install Halyard](#install-halyard)
