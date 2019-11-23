@@ -20,3 +20,16 @@ We are going to walk through the steps of deploying a simple application with Sp
 
 ### Configure Spinnaker and Jenkins
 - [Configure Spinnaker and Jenkins](#configure-spinnaker-and-jenkins)
+---
+
+## Create EC2 Instace
+
+## Install Halyard
+
+## Set Up K8s For Amazon EKS
+
+## Choose Spinnaker Install Environment
+
+## Create External Storage
+
+## Deploy Spinnaker
