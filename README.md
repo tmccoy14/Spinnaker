@@ -12,7 +12,7 @@ Here is the agenda for what we will be doing:
 - [Set up K8s for Amazon EKS](#set-up-k8s-for-amazon-eks)
 - [Choose Spinnaker Install Environment](#choose-spinnaker-install-environment)
 - [Create External Storage](#create-external-storage)
-- [Deploy Spinnaker]
+- [Deploy Spinnaker](#deploy-spinnaker)
 
 ### Jenkins
 - [Install Jenkins](#install-jenkins)
