@@ -93,7 +93,36 @@ aws cloudformation deploy --stack-name spinnaker-managed-infrastructure-setup --
 --parameter-overrides AuthArn=$AUTH_ARN ManagingAccountId=$MANAGING_ACCOUNT_ID --capabilities CAPABILITY_NAMED_IAM
 ```
 
+In order to use access the AWS EKS cluster from the command-line, we need to install aws-iam-authenticator and kubectl:
+```
+# aws-iam-authenticator
+curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/aws-iam-authenticator
 
+chmod +x ./aws-iam-authenticator
+
+mkdir -p $HOME/bin && cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$HOME/bin:$PATH
+
+echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
+
+# kubectl
+sudo apt-get update && sudo apt-get install -y apt-transport-https
+
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d kubernetes.list
+
+sudo apt-get update
+
+sudo apt-get install -y kubectl
+```
+
+Crete the kubeconfig for your cluster:
+```
+aws eks --region YOUR_REGION update-kubeconfig --name YOUR_CLUSTER_NAME
+
+# test cluster connection
+kubectl get svc
+```
 
 
 ## Choose Spinnaker Install Environment
